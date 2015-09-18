@@ -1,6 +1,6 @@
 {
   "name": "kingsquare-handlebars-helpers",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A set of Handlebars helpers shared among various projects",
   "main": "index.js",
   "author": {
@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/kingsquare/handlebars-helpers",
   "dependencies": {
-    "handlebars": "^3.0.0",
+    "handlebars": "^2.0.0",
     "moment-timezone": "^0.3.0"
   },
   "engines": {
