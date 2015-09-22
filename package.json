@@ -1,6 +1,6 @@
 {
   "name": "kingsquare-handlebars-helpers",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A set of Handlebars helpers shared among various projects",
   "main": "index.js",
   "author": {
