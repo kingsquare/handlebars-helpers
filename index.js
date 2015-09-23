@@ -7,5 +7,6 @@ module.exports = {
 	'dateFormat': require('./src/dateFormat.js'),
 	'untilDateFormat': require('./src/untilDateFormat.js'),
 	'host': require('./src/host.js'),
-	'nl2br': require('./src/nl2br.js')
+	'nl2br': require('./src/nl2br.js'),
+	'csvEscape': require('./src/csvEscape.js')
 };
