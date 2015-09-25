@@ -1,5 +1,7 @@
 'use strict';
 var dateFormat = require('./dateFormat.js');
+var moment = require('moment-timezone');
+moment.locale('nl');
 
 module.exports = function (date, block) {
 	if (!date) {

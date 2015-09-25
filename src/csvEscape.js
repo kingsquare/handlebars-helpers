@@ -12,12 +12,12 @@ module.exports = function(value) {
 	var quote = '"';
 
 	switch (typeof value) {
-		case 'undefined':
-			value = "";
-			break;
+	case 'undefined':
+		value = "";
+		break;
 
-		case 'object':
-			value = JSON.stringify(value);
+	case 'object':
+		value = JSON.stringify(value);
 	}
 
 	var string = String(value);
