@@ -4,6 +4,7 @@ module.exports = {
 	'compare': require('./src/compare.js'),
 	'csvEscape': require('./src/csvEscape.js'),
 	'dateFormat': require('./src/dateFormat.js'),
+	'eval': require('./src/eval.js'),
 	'filter': require('./src/filter.js'),
 	'host': require('./src/host.js'),
 	'nl2br': require('./src/nl2br.js'),
