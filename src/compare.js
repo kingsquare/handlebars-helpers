@@ -24,6 +24,13 @@ operators['<='] = operators.lte;
 operators['>='] = operators.gte;
 operators['%'] = operators.mod;
 
+function compare(lvalue, operator, rvalue) {
+	if (!operators[operator]) {
+		throw new Error("Handlerbars Helper 'compare' doesn't know the operator " + operator);
+	}
+	return (operators[operator](lvalue, rvalue));
+}
+
 module.exports = function (lvalue, operator, rvalue, options) {
 	if (arguments.length < 3) {
 		throw new Error("Handlerbars Helper 'compare' needs 2 parameters");
@@ -35,12 +42,10 @@ module.exports = function (lvalue, operator, rvalue, options) {
 		operator = "eq";
 	}
 
-	if (!operators[operator]) {
-		throw new Error("Handlerbars Helper 'compare' doesn't know the operator " + operator);
-	}
-
-	if (operators[operator](lvalue, rvalue)) {
+	if (compare(lvalue, operator, rvalue)) {
 		return options.fn(this);
 	}
 	return options.inverse(this);
 };
+
+module.exports.compare = compare;

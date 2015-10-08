@@ -1,4 +1,4 @@
-# Kingsquare handlebars 4.0 helpers
+# Kingsquare handlebars 2.0 helpers
 
 Install using npm: ``` npm install kingsquare-handlebars-helpers --save```
 

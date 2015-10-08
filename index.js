@@ -1,12 +1,13 @@
 'use strict';
 
 module.exports = {
-	'urlencode': require('./src/urlencode.js'),
-	'price': require('./src/price.js'),
 	'compare': require('./src/compare.js'),
+	'csvEscape': require('./src/csvEscape.js'),
 	'dateFormat': require('./src/dateFormat.js'),
-	'untilDateFormat': require('./src/untilDateFormat.js'),
+	'filter': require('./src/filter.js'),
 	'host': require('./src/host.js'),
 	'nl2br': require('./src/nl2br.js'),
-	'csvEscape': require('./src/csvEscape.js')
+	'price': require('./src/price.js'),
+	'untilDateFormat': require('./src/untilDateFormat.js'),
+	'urlencode': require('./src/urlencode.js')
 };
