@@ -18,7 +18,7 @@ operators['=='] = operators.eq;
 operators['==='] = operators.eqeq;
 operators['!='] = operators.neq;
 operators['!=='] = operators.neqeq;
-operators['>'] = operators.lt;
+operators['<'] = operators.lt;
 operators['>'] = operators.gt;
 operators['<='] = operators.lte;
 operators['>='] = operators.gte;
