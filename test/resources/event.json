@@ -1,0 +1,69 @@
+{
+	"_id": "55e461474f6ebfb900c6bb03",
+	"title": "test event",
+	"startDate": "2015-10-02T06:15:00.000Z",
+	"endDate": "2015-10-02T10:30:00.000Z",
+	"isAllDay": false,
+	"eventdesk": false,
+	"notes": "",
+	"description": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional/sda\n</html>",
+	"timetable": "<!DOCTYPE html PUBLICfsdfml>",
+	"website": "",
+	"location": "",
+	"maxParticipants": null,
+	"registrationStartDate": null,
+	"registrationEndDate": null,
+	"generalLedgerAccountNumber": "",
+	"costCentre": "",
+	"updatedAt": "2015-09-10T09:56:39.766Z",
+	"updatedBy": "Wendasdfenes",
+	"address": null,
+	"groupId": null,
+	"organiser": "org",
+	"sessions": [],
+	"tariffs": [],
+	"participants": [
+		{
+			"invoicePurchaseOrderNumber": "",
+			"tableNumber": "",
+			"dietRestriction": "",
+			"discountPercentage": null,
+			"_id": "55e58a2fd9e694b02f00002d",
+			"personId": "5273dc472e3f51590800210f",
+			"debtorId": "5273e09b2e3f515908005353",
+			"registerDate": null,
+			"status": "registered"
+		},
+		{
+			"invoicePurchaseOrderNumber": "",
+			"tableNumber": "",
+			"dietRestriction": "",
+			"discountPercentage": null,
+			"_id": "55e58a47018d42712b00002e",
+			"personId": "5273dc452e3f5159080020c7",
+			"person": {
+				"positions": [
+					{
+						"title": "no longer position",
+						"_active": false,
+						"company": {
+							"title": "old company title"
+						}
+					},
+					{
+						"title": "test position",
+						"_active": true,
+						"company": {
+							"title": "companytitle"
+						}
+					}
+				]
+			},
+			"debtorId": "5273e0972e3f5159080052cc",
+			"registerDate": null,
+			"status": "registered"
+		}
+	],
+	"status": "Ready",
+	"type": "meeting"
+}

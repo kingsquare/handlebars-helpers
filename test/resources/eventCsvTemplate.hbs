@@ -1,0 +1,1 @@
+{{#each records}}{{#each participants}}{{#filter person.positions "_active" "eq" true}}{{csvEscape results.0.title}}{{/filter}}{{#filter person.positions "_active" "eq" true}}{{csvEscape results.0.company.title}}{{/filter}}{{/each}}{{/each}}

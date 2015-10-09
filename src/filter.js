@@ -9,7 +9,7 @@ module.exports = function (context, filterPropery, operator, filterValue, option
 	}
 
 	if (context && context.filter) {
-		options.data.root.results = context.filter(function (item) {
+		this.results = context.filter(function (item) {
 			var leftValue = ((typeof filterPropery === 'string') ? item[filterPropery] || filterPropery : filterPropery);
 			var rightValue = ((typeof filterValue === 'string') ? item[filterValue] || filterValue : filterValue);
 			return compareHelper.compare(leftValue, operator, rightValue);
