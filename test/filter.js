@@ -43,5 +43,18 @@ exports.filter = function(test){
 	template = renderEngine.compile('{{#filter positions "salary" 10000}}{{#each results}}{{title}}{{/each}}{{/filter}}');
 	result = template(sample);
 	test.ok(result === 'commercieel mgr', result);
+
+	template = renderEngine.compile('{{#filter positions true "eq" "_active"}} {{results.0.title}} {{/filter}}');
+	result = template(sample);
+	test.ok(result === ' Manager ', result);
+
+
+	template = renderEngine.compile('{{#filter positions "a" "eq" "a"}}{{results.0.title}}{{/filter}}');
+	result = template(sample);
+	test.ok(result === 'Commercieel Manager', result);
+
+	template = renderEngine.compile('{{#filter positions "a" "eq" "b"}}{{results.0.title}}{{/filter}}');
+	result = template(sample);
+	test.ok(result === '', result);
 	test.done();
 };
