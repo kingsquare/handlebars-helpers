@@ -5,6 +5,7 @@ module.exports = {
 	'csvEscape': require('./src/csvEscape.js'),
 	'dateFormat': require('./src/dateFormat.js'),
 	'filter': require('./src/filter.js'),
+	'fromContainer': require('./src/fromContainer.js'),
 	'host': require('./src/host.js'),
 	'nl2br': require('./src/nl2br.js'),
 	'price': require('./src/price.js'),
