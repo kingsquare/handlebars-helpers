@@ -67,13 +67,39 @@ exports.filter = function(test){
 	template = renderEngine.compile('{{#each participants}}{{#filter ../sessions "_id" "eq" "sid"}}{{ personId }}!{{/filter}}{{/each}}');
 	result = template({
 		participants: [{
-			sessionId: 'sid',
 			personId: 'pid'
 		}],
 		sessions: [{
-			'_id': 'sid'
+			'_id': 'sid',
+			participants: [
+				{
+					personId: 'pid'
+				},
+				{
+					personId: 'pid'
+				}
+			]
 		}]
 	});
 	test.ok(result === 'pid!', result);
+
+	template = renderEngine.compile('{{#each participants}}{{#filter ../sessions "_id" "eq" "sid"}}{{#filter results.0.participants "personId" "eq" personId}}{{results.length}}!{{/filter}}{{/filter}}{{/each}}');
+	result = template({
+		participants: [{
+			personId: 'pid'
+		}],
+		sessions: [{
+			'_id': 'sid',
+			participants: [
+				{
+					personId: 'pid'
+				},
+				{
+					personId: 'pid'
+				}
+			]
+		}]
+	});
+	test.ok(result === '2!', result);
 	test.done();
 };
