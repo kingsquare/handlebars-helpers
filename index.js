@@ -10,5 +10,6 @@ module.exports = {
 	'nl2br': require('./src/nl2br.js'),
 	'price': require('./src/price.js'),
 	'untilDateFormat': require('./src/untilDateFormat.js'),
-	'urlencode': require('./src/urlencode.js')
+	'urlencode': require('./src/urlencode.js'),
+	'concat': require('./src/concat.js')
 };
