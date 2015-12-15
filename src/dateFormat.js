@@ -8,6 +8,11 @@ module.exports = function (date, block) {
 		return '';
 	}
 
+	//support for mongo objectids
+	if (date.length === 24) {
+		date = new Date(parseInt(date.substring(0,8), 16) * 1000);
+	}
+
 	var format =  "DD-MM-YYYY";
 	if (block && block.hash && block.hash.format) {
 		format = block.hash.format;
