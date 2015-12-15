@@ -63,5 +63,17 @@ exports.filter = function(test){
 	template = renderEngine.compile(fs.readFileSync(__dirname + '/resources/eventCsvTemplate.hbs', 'utf-8'));
 	result = template({ records: [JSON.parse(fs.readFileSync(__dirname + '/resources/event.json', 'utf-8'))] });
 	test.ok(result === 'test positioncompanytitle', result);
+
+	template = renderEngine.compile('{{#each participants}}{{#filter ../sessions "_id" "eq" "sid"}}{{ personId }}!{{/filter}}{{/each}}');
+	result = template({
+		participants: [{
+			sessionId: 'sid',
+			personId: 'pid'
+		}],
+		sessions: [{
+			'_id': 'sid'
+		}]
+	});
+	test.ok(result === 'pid!', result);
 	test.done();
 };
