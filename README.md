@@ -12,3 +12,6 @@ Object.keys(helpers).forEach(function (helperName) {
 	handlebars.registerHelper(helperName, helpers[helperName]);
 });
 ```
+
+## List of available helpers
+The full list of helpers is maintained in the [src](./src) folder.
