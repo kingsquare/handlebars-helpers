@@ -11,5 +11,6 @@ module.exports = {
 	'price': require('./src/price.js'),
 	'untilDateFormat': require('./src/untilDateFormat.js'),
 	'urlencode': require('./src/urlencode.js'),
+	'empty': require('./src/empty.js'),
 	'concat': require('./src/concat.js')
 };
