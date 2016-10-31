@@ -1,14 +1,17 @@
-# Kingsquare handlebars 2.0 helpers
+# Kingsquare handlebars helpers
 
 Install using npm: ``` npm install kingsquare-handlebars-helpers --save```
 
 ## Usage
 
 ```javascript
-var handlebars = require('handlebars');
-var helpers = require('kingsquare-handlebars-helpers');
+var Handlebars = require('kingsquare-handlebars-helpers')(require('handlebars'));
+```
 
-Object.keys(helpers).forEach(function (helperName) {
-	handlebars.registerHelper(helperName, helpers[helperName]);
+```javascript
+var Handlebars = require('handlebars');
+var Helpers = require('kingsquare-handlebars-helpers').helpers;
+Object.keys(Helpers).forEach(function (helper) {
+    Handlebars.registerHelper(helper, Helpers[helper]);
 });
 ```
