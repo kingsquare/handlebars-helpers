@@ -24,7 +24,7 @@ Object.keys(helpers).forEach(function (helperName) {
 | filter | Filter `object` by given `operation` on `key` using `value` |  `object`, `key` , `operation`, `value` |
 | fromContainer |  |  |
 | host |  |  |
-| nl2br | Translate line breaks to <br/> | `value` |
+| nl2br | Translate line breaks to html breaks | `value` |
 | price | Make a number a human readable price (with possible currency) | `value`, `currencySymbol` (optional) |
 | untilDateFormat |  |  |
 | urlencode | URL encodes the given value | `value` |
