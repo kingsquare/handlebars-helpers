@@ -18,7 +18,16 @@ Object.keys(helpers).forEach(function (helperName) {
 | Block | Description | Params |
 | --- | --- | --- |
 | compare | compares a `value` by operation `eq`, `eqeq`, `neq`, `neqeq` , `lt` , `gt` , `lte`, `gte`, `typeof`, `regexp`, `mod`.  | `value`, `operation`, `expected ` |
-
+| concat |  |  |
+| csvEscape |  |  |
+| dateFormat |  |  |
+| filter |  |  |
+| fromContainer |  |  |
+| host |  |  |
+| nl2br |  |  |
+| price | Make a number a human readable price (with possible currency) | `value`, `currencySymbol` (optional) |
+| untilDateFormat |  |  |
+| urlencode | URL encodes the given value | `value` |
 
 ### Compare
 
@@ -41,3 +50,31 @@ Inversion support
     {else}
         Goodbye
     {/compare}
+
+### Price
+
+Make a number a human readable price (with possible currency)
+
+Parameters:
+
+  `value`, `currencySymbol`
+  
+Examples:
+
+    {price this}
+    
+    {price this "€"}
+
+### urlencode
+
+URL encodes the given value
+
+Parameters:
+
+  `value`
+  
+Examples:
+
+    {urlencode this}
+  
+
