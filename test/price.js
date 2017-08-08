@@ -8,5 +8,9 @@ exports.price = function(test){
 	test.ok(result === '€ 1,11', result);
 	result = template({ a: 1.1153 });
 	test.ok(result === '€ 1,12', result);
+	result = template({ a: '1.13' });
+	test.ok(result === '€ 1,13', result);
+	result = template({ a: undefined });
+	test.ok(result === 'X', result);
 	test.done();
 };

@@ -1,13 +1,14 @@
 'use strict';
 
 module.exports = function (number, currencySymbol) {
-	if (!number) {
-		number = 0;
+	const numberFloat = parseFloat(number);
+	if (isNaN(numberFloat)) {
+		return 'X';
 	}
 
 	if (typeof currencySymbol !== "string") {
 		currencySymbol = '€ ';
 	}
 
-	return (currencySymbol || '€ ') + number.toFixed(2).replace(/\./g, ',');
+	return (currencySymbol || '€ ') + numberFloat.toFixed(2).replace(/\./g, ',');
 };
