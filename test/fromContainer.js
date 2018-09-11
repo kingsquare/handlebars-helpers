@@ -14,6 +14,8 @@ exports.fromContainer = function(test){
 	result = template({ x: { b: { c: 'd' } }});
 	test.ok(result === '', result);
 
+  result = template({ a: { b: { c: ['d', 'e', 'f'] } }});
+  test.ok(result === 'd, e, f', result);
 
 	test.done();
 };
