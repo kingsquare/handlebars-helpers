@@ -11,6 +11,11 @@ var traverseNibbles = function(container, nibbles) {
 		return traverseNibbles(nextValue, nibbles);
 	}
 
+  if (Array.isArray(nextValue)) {
+    // output as string with spaces else HBS outputs the array as X,Y,Z which will not be wrapped by the browser
+    return nextValue.join(', ');
+  }
+
 	return nextValue || "";
 };
 
