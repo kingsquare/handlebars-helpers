@@ -1,6 +1,6 @@
 'use strict';
 
-var Handlebars = require('handlebars');
+var Handlebars = require("handlebars/dist/handlebars");
 
 module.exports = function (text) {
 	text = Handlebars.Utils.escapeExpression(text);
